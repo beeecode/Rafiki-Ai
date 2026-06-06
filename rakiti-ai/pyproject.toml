@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rakiti-ai"
+version = "0.1.0"
+description = "A local-first terminal assistant for safe laptop task automation."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Rafiki Ai" }]
+dependencies = []
+
+[project.optional-dependencies]
+# voice dependencies are optional, free, local-only packages:
+# sounddevice captures explicit push-to-talk microphone audio;
+# vosk converts that short audio capture to text using a local model.
+voice = [
+    "sounddevice>=0.4.6",
+    "vosk>=0.3.45"
+]
+
+[project.scripts]
+rakiti-ai = "rakiti_ai.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

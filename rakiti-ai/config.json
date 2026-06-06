@@ -1,0 +1,128 @@
+{
+  "allowed_apps": {
+    "chrome": {
+      "aliases": ["chrome", "google chrome", "google", "browser"],
+      "windows": "chrome",
+      "macos": "Google Chrome",
+      "linux": "google-chrome"
+    },
+    "edge": {
+      "aliases": ["edge", "microsoft edge"],
+      "windows": "msedge",
+      "macos": "Microsoft Edge",
+      "linux": "microsoft-edge"
+    },
+    "firefox": {
+      "aliases": ["firefox", "mozilla firefox"],
+      "windows": "firefox",
+      "macos": "Firefox",
+      "linux": "firefox"
+    },
+    "vscode": {
+      "aliases": ["vscode", "vs code", "visual studio code", "code", "code editor"],
+      "windows": "code",
+      "macos": "Visual Studio Code",
+      "linux": "code"
+    },
+    "notepad": {
+      "aliases": ["notepad", "text editor"],
+      "windows": "notepad",
+      "macos": "TextEdit",
+      "linux": "gedit"
+    },
+    "file_explorer": {
+      "aliases": ["file explorer", "explorer", "files"],
+      "windows": "explorer",
+      "macos": "Finder",
+      "linux": "nautilus"
+    },
+    "calculator": {
+      "aliases": ["calculator", "calc"],
+      "windows": "calc",
+      "macos": "Calculator",
+      "linux": "gnome-calculator"
+    },
+    "terminal": {
+      "aliases": ["terminal", "powershell", "shell"],
+      "windows": "powershell",
+      "macos": "Terminal",
+      "linux": "gnome-terminal"
+    }
+  },
+  "allowed_directories": [
+    "~",
+    "~/Desktop",
+    "~/Documents",
+    "~/Downloads",
+    "~/Projects"
+  ],
+  "blocked_directories": [
+    "/bin",
+    "/boot",
+    "/dev",
+    "/etc",
+    "/lib",
+    "/lib64",
+    "/proc",
+    "/root",
+    "/sbin",
+    "/sys",
+    "/usr",
+    "/var",
+    "/System",
+    "/Library",
+    "~/Library/Keychains",
+    "~/Library/Application Support/Google/Chrome",
+    "~/Library/Application Support/Microsoft Edge",
+    "~/Library/Application Support/BraveSoftware",
+    "~/Library/Application Support/Firefox",
+    "~/Library/Application Support/Electrum",
+    "~/Library/Application Support/Exodus",
+    "~/Library/Application Support/Bitcoin",
+    "C:/Windows",
+    "C:/Program Files",
+    "C:/Program Files (x86)",
+    "C:/ProgramData",
+    "~/AppData/Local/Google/Chrome/User Data",
+    "~/AppData/Local/Microsoft/Edge/User Data",
+    "~/AppData/Local/BraveSoftware/Brave-Browser/User Data",
+    "~/AppData/Roaming/Mozilla/Firefox/Profiles",
+    "~/AppData/Roaming/Electrum",
+    "~/AppData/Roaming/Exodus",
+    "~/AppData/Roaming/Bitcoin",
+    "~/.ssh",
+    "~/.gnupg",
+    "~/.aws",
+    "~/.azure",
+    "~/.docker",
+    "~/.kube",
+    "~/.config/google-chrome",
+    "~/.config/chromium",
+    "~/.config/BraveSoftware",
+    "~/.mozilla/firefox",
+    "~/.electrum",
+    "~/.bitcoin"
+  ],
+  "max_search_results": 25,
+  "require_confirmation_for_medium_risk": true,
+  "voice": {
+    "enabled": true,
+    "model_path": "models/vosk-model-small-en-us-0.15",
+    "input_device": 1,
+    "sample_rate": 16000,
+    "max_duration_seconds": 6,
+    "max_recording_seconds": 6,
+    "require_session_consent": true,
+    "silence_timeout_seconds": 1.2,
+    "silence_rms_threshold": 500,
+    "low_confidence_threshold": 0.72
+  },
+  "llm": {
+    "enabled": false,
+    "provider": "ollama",
+    "base_url": "http://127.0.0.1:11434",
+    "model": "llama3.2",
+    "timeout_seconds": 10,
+    "fallback_to_rule_parser": true
+  }
+}
